@@ -1,0 +1,5 @@
+/home/pka_human/Рабочий стол/gtk-test/build/CMakeFiles/edit_cache.dir
+/home/pka_human/Рабочий стол/gtk-test/build/CMakeFiles/rebuild_cache.dir
+/home/pka_human/Рабочий стол/gtk-test/build/src/CMakeFiles/gtk-test.dir
+/home/pka_human/Рабочий стол/gtk-test/build/src/CMakeFiles/edit_cache.dir
+/home/pka_human/Рабочий стол/gtk-test/build/src/CMakeFiles/rebuild_cache.dir
