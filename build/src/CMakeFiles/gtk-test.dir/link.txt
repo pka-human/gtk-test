@@ -1,1 +1,0 @@
-clang  -Wall -Wextra -Xlinker --dependency-file -Xlinker CMakeFiles/gtk-test.dir/link.d "CMakeFiles/gtk-test.dir/main.c.o" -o "/home/pka_human/Рабочий стол/gtk-test/bin/gtk-test"
