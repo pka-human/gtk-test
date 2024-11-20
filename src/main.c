@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
     
     // text entry
     entry = gtk_entry_new();
-    gtk_entry_set_placeholder_text(GTK_ENTRY(entry), "Введите текст...");
+    gtk_entry_set_placeholder_text(GTK_ENTRY(entry), "Type something...");
     g_signal_connect(entry, "changed", G_CALLBACK(text_changed), NULL);
 
     // close the window button
