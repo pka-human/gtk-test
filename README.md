@@ -1,6 +1,6 @@
 # gtk-test
 
-Build with CLANG (recommended):
+Build with CLANG (***recommended***):
 ```bash
 export CC=clang && export CXX=clang++ && cmake -S . -B build && cmake --build build
 ```
