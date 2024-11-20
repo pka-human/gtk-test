@@ -1,40 +1,50 @@
 #include <gtk/gtk.h>
 
-void pickme_clicked(GtkWidget *button, gpointer user_data) {
-    g_print("pickme\n");
+void button1_clicked(GtkWidget *button, gpointer user_data) {
+    g_print("Button 1 clicked!\n");
 }
 
-void sex_clicked(GtkWidget *button, gpointer user_data) {
-    g_print("SEX SEX SEX!\n");
+void button2_clicked(GtkWidget *button, gpointer user_data) {
+    g_print("Button 2 clicked!\n");
+}
+
+void button3_clicked(GtkWidget *button, gpointer user_data) {
+    g_print("Button 3 clicked!\n");
 }
 
 int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
 
-    // windows fuck you
+    // windows
     GtkWidget *main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(main_window), "Simple GTK Interface");
-    gtk_window_set_default_size(GTK_WINDOW(main_window), 300, 200);
+    gtk_window_set_default_size(GTK_WINDOW(main_window), 512, 512);
 
-    // грид
+    // grid
     GtkWidget *grid = gtk_grid_new();
     gtk_container_add(GTK_CONTAINER(main_window), grid);
 
-    // пикми
-    GtkWidget *pickme_button = gtk_button_new_with_label("Click me");
-    g_signal_connect(pickme_button, "clicked", G_CALLBACK(pickme_clicked), NULL);
+    // first button
+    GtkWidget *button1 = gtk_button_new_with_label("Button 1");
+    g_signal_connect(button1, "clicked", G_CALLBACK(button1_clicked), NULL);
 
-    // сэкс
-    GtkWidget *s_button = gtk_button_new_with_label("Sex");
-    g_signal_connect(s_button, "clicked", G_CALLBACK(sex_clicked), NULL);
+    // second button
+    GtkWidget *button2 = gtk_button_new_with_label("Button 2");
+    g_signal_connect(button2, "clicked", G_CALLBACK(button2_clicked), NULL);
 
-    // сайз
-    gtk_widget_set_size_request(pickme_button, 120, 50);
-    gtk_widget_set_size_request(s_button, 120, 50);
+    // third button
+    GtkWidget *button3 = gtk_button_new_with_label("Button 3");
+    g_signal_connect(button3, "clicked", G_CALLBACK(button3_clicked), NULL);
 
-    // кнопки в грид
-    gtk_grid_attach(GTK_GRID(grid), pickme_button, 0, 0, 1, 1); 
-    gtk_grid_attach(GTK_GRID(grid), s_button, 1, 0, 1, 1);
+    // size
+    gtk_widget_set_size_request(button1, 120, 50);
+    gtk_widget_set_size_request(button2, 120, 50);
+    gtk_widget_set_size_request(button3, 120, 50);
+
+    // buttons to grid attach
+    gtk_grid_attach(GTK_GRID(grid), button1, 0, 0, 1, 1); 
+    gtk_grid_attach(GTK_GRID(grid), button2, 1, 0, 1, 1);
+    gtk_grid_attach(GTK_GRID(grid), button3, 0, 1, 1, 1);
   
     g_signal_connect(main_window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
