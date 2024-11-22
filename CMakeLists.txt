@@ -17,9 +17,3 @@ file(GLOB SOURCES "src/*.c")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} ${GTK_LIBRARIES})
-
-add_custom_target(clean-all
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
-    COMMENT "Ok"
-)
